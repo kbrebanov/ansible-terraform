@@ -1,6 +1,8 @@
 terraform
 =========
 
+[![Ansible Role](https://img.shields.io/ansible/role/6256.svg)](https://galaxy.ansible.com/list#/roles/6256)
+
 Installs Terraform
 
 Requirements
