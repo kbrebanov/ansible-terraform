@@ -1,2 +1,5 @@
 ---
 # defaults file for terraform
+
+terraform_version: 0.6.7
+terraform_sha256sum: 2e5de08f545e117eb9825b697c5ad290ee3fdcaae7d6de4b0e99830e58b38b2e

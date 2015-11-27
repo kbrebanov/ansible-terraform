@@ -1,2 +1,27 @@
 ---
 # tasks file for terraform
+
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: terraform
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags: terraform
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: terraform
+
+- name: Download Terraform
+  get_url: >
+    url={{ terraform_url }}
+    dest={{ terraform_download_dir }}/terraform.zip
+    sha256sum={{ terraform_sha256sum }}
+  tags: terraform
+
+- name: Unzip Terraform to installation directory
+  command: unzip {{ terraform_download_dir }}/terraform.zip -d {{ terraform_install_dir }}
+  args:
+    creates: "{{ terraform_install_dir }}/terraform"
+  tags: terraform
