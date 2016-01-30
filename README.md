@@ -1,7 +1,7 @@
 terraform
 =========
 
-[![Ansible Role](https://img.shields.io/ansible/role/6256.svg)](https://galaxy.ansible.com/list#/roles/6256)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-terraform.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-terraform)
 
 Installs Terraform
 
