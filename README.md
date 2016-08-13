@@ -14,9 +14,9 @@ Role Variables
 --------------
 
 | Name                | Default                                                          | Description                     |
-|---------------------|------------------------------------------------------------------|---------------------------------|
-| terraform_version   | 0.6.10                                                           | Version of Terraform to install |
-| terraform_sha256sum | d7c07e2bf587257673bae710c776430a8cc5a755a9ad4a2cbae066d0cd02a862 | SHA 256 checksum of package     |
+|:--------------------|:-----------------------------------------------------------------|:--------------------------------|
+| terraform_version   | 0.7.0                                                            | Version of Terraform to install |
+| terraform_sha256sum | a196c63b967967343f3ae9bb18ce324a18b27690e2d105e1f38c5a2d7c02038d | SHA 256 checksum of package     |
 
 Dependencies
 ------------
