@@ -5,13 +5,9 @@
   include_vars: "{{ ansible_distribution }}.yml"
   tags: terraform
 
-- include: CentOS.yml
-  when: ansible_distribution == "CentOS"
-  tags: terraform
-
-- include: Ubuntu.yml
-  when: ansible_distribution == "Ubuntu"
-  tags: terraform
+- name: Include distribution specific tasks
+  include: "{{ ansible_distribution }}.yml"
+  tags: unzip
 
 - name: Check if Terraform is already installed
   stat: >
